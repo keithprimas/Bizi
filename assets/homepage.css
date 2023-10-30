@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url(bg1.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#resuME {
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.72);
+    position: relative;
+    bottom: 40px;
+}
+
+#slogan {
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.72);
+    position: relative;
+    bottom: 40px;
+}
+
+#login-section {
+    position: relative;
+    bottom: 70px;
+}
+
+img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
