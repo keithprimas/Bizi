@@ -9,5 +9,6 @@ app.use(express.json());
 app.use(express.urlencoded ({ extended: true}));
 
 sequelize.sync({ force: false }).then(() => {
+    // Tells us we're in the server 
     app.listen(PORT, () => console.log("You're logged in"));
 });
