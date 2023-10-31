@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Input Form</title>
+</head>
+<body>
+    <h1>User Information Form</h1>
+    <form id="userForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Enter your message" rows="4" required></textarea><br><br>
+        
+        <button type="button" id="saveButton">Save</button>
+    </form>
+
+    <div id="output">
+        <!-- Saved information will be displayed here -->
+    </div>
+
+    <script>
+        // JavaScript to handle form submission and data display
+        document.getElementById("saveButton").addEventListener("click", function() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+            
+            // You can save or process the data as needed
+            // For this example, we'll just display it on the page
+            var output = "Name: " + name + "<br>Email: " + email + "<br>Message: " + message;
+            document.getElementById("output").innerHTML = output;
+        });
+    </script>
+</body>
+</html>
