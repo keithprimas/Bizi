@@ -48,10 +48,9 @@ body {
 
 #signup-section {
     position: relative;
-    top: 100px;
+    top: 150px;
     left: 80px;
 }
-
 
 
 @media only screen and (max-width: 1000px) {
