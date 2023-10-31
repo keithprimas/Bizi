@@ -15,22 +15,48 @@ body {
 #resuME {
     text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.72);
     position: relative;
-    bottom: 40px;
+    bottom: 60px;
 }
 
+#resuME {
+    font-size: 140px;
+    color: #ffffff;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      color: #ffffff; /* Start with white color */
+      opacity: 0;
+    }
+    100% {
+      color: #7ac8ff; /* End with blue color */
+      opacity: 1;
+    }
+  }
+  
 #slogan {
     text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.72);
     position: relative;
-    bottom: 40px;
+    bottom: 80px;
 }
 
 #login-section {
     position: relative;
-    bottom: 70px;
+    bottom: 130px;
 }
 
-img {
-    max-width: 200px;
-    max-height: 200px;
+#signup-section {
+    position: relative;
+    top: 150px;
+    left: 80px;
 }
 
+
+@media only screen and (max-width: 1000px) {
+    #signup-section {
+      position: relative;
+      top: 0px;
+      left: 0px;
+    }
+  }
