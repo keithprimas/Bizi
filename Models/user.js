@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
+const sequelize = require('./sequelize'); // Import your Sequelize instance (sequelize.js)
 
 class EndUser extends Model {
     async hashPassword() {
@@ -28,6 +29,25 @@ EndUser.init(
                 len: [10]
             }
         }
+    },
+    {
+        hooks: {
+            // set up beforeCreate lifecycle "hook" functionality
+            async beforeCreate(newUserData) {
+                newUserData.password = await bcrypt.hash(newUserData.password, 10);
+                return newUserData;
+            },
+            // set up beforeUpdate lifecycle "hook" functionality
+            async beforeUpdate(updatedUserData) {
+                updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+                return updatedUserData;
+            },
+        },
+        sequelize, // Pass your Sequelize instance here
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: "user",
     }
 );
 
@@ -36,4 +56,5 @@ EndUser.beforeCreate(async (user) => {
 });
 
 module.exports = EndUser;
+
 
