@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
-const sequelize = require('./sequelize'); // Import your Sequelize instance (sequelize.js)
+const sequelize = require('./sequelize'); 
 
 class EndUser extends Model {
     async hashPassword() {
@@ -32,7 +32,7 @@ EndUser.init(
     },
     {
         hooks: {
-            // set up beforeCreate lifecycle "hook" functionality
+           
             async beforeCreate(newUserData) {
                 newUserData.password = await bcrypt.hash(newUserData.password, 10);
                 return newUserData;
