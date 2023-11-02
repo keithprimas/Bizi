@@ -18,16 +18,32 @@ EndUser.init(
             primaryKey: true,
             autoIncrement: true
         },
-        username: {
+        email: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            unique: true,
+            validate: {
+                isEmail: {
+                    args: true,
+                    msg: 'Please check for a vaild email',
+                },
+            },
         },
         password: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                len: [10]
-            }
+                min: [10]
+            },
+
+        },
+        firstName: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        lastName: {
+            type: DataTypes.STRING,
+            allowNull: false,
         }
     },
     {
