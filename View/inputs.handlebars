@@ -1,0 +1,211 @@
+{{!-- reference all.handlebars --}}
+
+
+{{!-- Contact Info: --}}
+    {{!-- Name
+    Email
+    Phone
+    Location: --}}
+
+////////////////////////////////////  
+
+
+<div class="add-contact-info-container">
+    <h2>
+        Contact Info
+    </h2>
+    <form class="contact-info-form">
+        <label for="user_name">
+            Name:
+        </label>
+        <br />
+        <textarea name="user_name" id="user_name" cols="30" rows="10">
+            {{user_name}}        
+        </textarea>
+        <br />
+        <label for="email_address">
+            Email:
+        </label>
+        <br />
+        <textarea name="email_address" id="email_address" cols="30" rows="10">
+            {{email_address}}
+        </textarea>
+        <br />
+        <label for="phone_number">
+            Phone:
+        </label>
+        <br/>
+        <textarea name="phone_number" id="phone_number" cols="30" rows="10">
+            {{phone_number}}
+        </textarea>
+        <br />
+        <label for="location">
+            City, State:
+        </label>
+        <br />
+        <textarea name="location" id="location" cols="30" rows="10">
+            {{location}}
+        </textarea>
+        <br />        
+    </form>
+</div>
+
+
+{{!-- Pic? --}}
+
+////////////////////////////////////
+
+{{!-- <div class="add-headshot-container">
+    <h2>Your Picture Here!</h2>
+    <form class="headshot-form">
+        <label for="headshot">
+            Upload Picture:
+        </label>
+        <br />
+        
+    </form>
+</div> --}}
+
+
+
+{{!-- Personal Profile --}}
+
+////////////////////////////////////
+
+<div class="personal-profile">
+    <h2>Personal Profile</h2>
+    <form class="personal-form">
+        <label for="personal">
+            Background/Experience:
+        </label>
+        <br />
+        <textarea name="personal" id="personal" cols="30" rows="10">
+            {{personal}}
+        </textarea>
+        <br />        
+    </form>
+</div>
+
+
+
+{{!-- Education --}}
+
+//////////////////////////////////// 
+
+<div class="education">
+    <h2>Education</h2>
+    <form class="education-form">
+        <label for="education">
+            Degree:
+        </label>
+        <br />
+        <textarea name="education" id="education" cols="30" rows="10">
+            {{education}}
+        </textarea>
+        <br />        
+    </form>
+</div>
+
+
+
+{{!-- Career Highlights n Accolades --}}
+
+//////////////////////////////////// 
+
+<div class="highlights">
+    <h2>Career Highlights</h2>
+    <form class="highlights-form">
+        <label for="highlights">
+            Accomplishments/Accolades:
+        </label>
+        <br />
+        <textarea name="highlights" id="highlights" cols="30" rows="10">
+            {{highlights}}
+        </textarea>
+        <br />        
+    </form>
+</div>
+
+
+
+
+{{!-- JobOne --}}
+    {{!-- Title
+    Company 
+    Dates Employed
+    Job Description --}}
+
+//////////////////////////////////// 
+
+<div class="add-work-history-container">
+    <h2>
+        Work History
+    </h2>
+    <form class="job-one-form">
+        <label for="title">
+            Title:
+        </label>
+        <br />
+        <textarea name="title" id="title" cols="30" rows="10">
+            {{title}}        
+        </textarea>
+        <br />
+        <label for="company">
+            Company Name:
+        </label>
+        <br />
+        <textarea name="company" id="company" cols="30" rows="10">
+            {{company}}
+        </textarea>
+        <br />
+        <label for="dates_emplyed">
+            Dates Employed:
+        </label>
+        <br />
+        <textarea name="dates_employed" id="dates_employed" cols="30" rows="10">
+            {{dates_employed}}
+        </textarea>
+        <br />
+        <label for="job_description">
+            Job Description:
+        </label>
+        <br />
+        <textarea name="job_description" id="job_description" cols="30" rows="10">
+            {{job_description}}
+        </textarea>
+        <br />
+        <button type="submit" value="Submit">
+        Submit
+        </button>
+    </form>
+</div>
+
+//////////////////////////////////// //////////////////////////////////// //////////////////////////////////// //////////////////////////////////// 
+{{!-- not sure if we need  more job forms, we could just find a way to loop through job one and let user resubmit --}}
+//////////////////////////////////// //////////////////////////////////// //////////////////////////////////// //////////////////////////////////// 
+
+
+
+
+{{!-- JobTwo --}}
+        {{!-- Title
+    Company 
+    Dates Employed
+    Job Description --}}
+
+//////////////////////////////////// 
+
+{{!-- JobThree --}}
+        {{!-- Title
+    Company 
+    Dates Employed
+    Job Description --}}
+
+//////////////////////////////////// 
+
+{{!-- JobFour --}}
+        {{!-- Title
+    Company 
+    Dates Employed
+    Job Description --}}
+
