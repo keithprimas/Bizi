@@ -21,7 +21,7 @@ body {
 #resuME {
     font-size: 140px;
     color: #ffffff;
-    animation: fadeIn 1s ease-in-out forwards;
+    animation: fadeIn 1.5s ease-in-out forwards;
   }
   
   @keyframes fadeIn {
@@ -43,12 +43,12 @@ body {
 
 #login-section {
     position: relative;
-    bottom: 130px;
+    bottom: 100px;
 }
 
 #signup-section {
     position: relative;
-    top: 150px;
+    top: 300px;
     left: 80px;
 }
 
