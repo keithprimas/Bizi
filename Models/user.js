@@ -18,9 +18,16 @@ EndUser.init(
             primaryKey: true,
             autoIncrement: true
         },
-        username: {
+        email: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            unique: true,
+            validate: {
+                isEmail: {
+                    args: true,
+                    msg: 'Please check for a vaild email',
+                },
+            },
         },
         password: {
             type: DataTypes.STRING,
