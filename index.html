@@ -8,14 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/scroll-solid.svg" type="image/x-icon">
     <title>resuME</title>
 </head>
 <body>
     <div class="container mt-5">
         <div class="row justify-content-lg-center" style="margin-top: 30px;">
             <div class="col-lg-4">
-                <h1 class="text-center" style="font-size: 140px; padding-bottom: 10px; color: #ffffff" id="resuME">resuME</h1>
-                <h4 class="text-center" style="padding-bottom: 50px; color: #ffffff; font-size: 38px;" id="slogan">The quick and easy way to build a professional resume today!</h4>
+                <h1 class="text-center" style="font-size: 140px; padding-bottom: 10px; color: #ffffff" id="resuME"><i class="fa-solid fa-scroll"></i>resuME</h1>
+                <h4 class="text-center" style="padding-bottom: 50px; color: #ffffff; font-size: 35px;" id="slogan">The quick and easy way to build a professional resume today!</h4>
                 <div class="card border-0" id="login-section">
                     <div class="card-body bg-light">
                         <!-- Login Form -->
@@ -26,19 +27,41 @@
                             </div>
                             <div class="form-group" style="padding-bottom: 10px;">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password" placeholder="Enter password">
+                                <input type="password" class="form-control" id="login-password" placeholder="Enter password">
                             </div>
                             <div class="form-check">
                                 <input type="checkbox" class="form-check-input" id="rememberMe">
                                 <label class="form-check-label" for="rememberMe">Remember Me</label>
                             </div>
-                            <button type="button" class="btn btn-link link-underline link-underline-opacity-0">Forgot Password?</button>
-                            <button type="submit" class="btn btn-success float-right">Login</button>
-                        </form>
+                            <button type="button" class="btn btn-link link-underline link-underline-opacity-0" style="color: #7ac8ff; font-weight: bold; letter-spacing: 2px;";>Forgot Password?</button>
+                            <button type="submit" id="login-button" class="btn btn-success float-right">Login</button>
+
+                        </<!-- Add an input field for the new password -->
+                        <div id="password-reset-dropdown" style="display: none; padding-top: 20px;">
+                            <div class="form-group" style="padding-bottom: 10px;">
+                                <label for="reset-email">Enter your email address to reset your password</label>
+                                <input type="text" class="form-control" placeholder="Enter your email address">
+                            </div>
+                            <div class="form-group" style="padding-bottom: 10px;">
+                                <label for="new-password">Enter a new password</label>
+                                <input type="password" class="form-control" id="new-password" placeholder="Enter a new password">
+                            </div>
+                            <button type="button" id="reset-password-button" class="btn btn-primary">Reset Password</button>
+                        </div>
+                        
+                        <!-- Add a dropdown for resetting the password -->
+                            <div id="password-reset-dropdown" style="display: none;">
+                                <div class="form-group" style="padding-bottom: 10px;">
+                                    <label for="reset-email">Enter your email address to reset your password</label>
+                                    <input type="text" class="form-control" id="reset-email" placeholder="Enter your email address">
+                                </div>
+                                <button type="button" class="btn btn-primary">Reset Password</button>
+                            </div>
+                            
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4" style="margin-bottom: 100px;">
                 <div class="card border-0" id="signup-section">
                     <div class="card-body bg-light">
                         <!-- Signup Form -->
@@ -60,14 +83,18 @@
                                 <label for="signupPassword">Password</label>
                                 <input type="password" class="form-control" id="signupPassword" placeholder="Choose a password">
                             </div>
-                            <button type="submit" class="btn btn-primary float-right">Sign Up</button>
+                            <button type="button" id="signup-button" class="btn btn-primary">Sign Up
+                            </button>
+                            <div id="signup-popover" style="padding-top: 10px; font-weight: bold;">
+                                <!-- Popover content will be displayed here -->
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-  
+
     <footer class="text-center text-lg-start fixed-bottom">
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); color: white">
@@ -76,61 +103,10 @@
         <!-- Copyright -->
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Check if local storage is supported
-            if (typeof Storage !== "undefined") {
-                const loginForm = document.querySelector("#login-section form");
-                const emailInput = document.querySelector("#login-email");
-                const passwordInput = document.querySelector("#password");
-                const rememberMeCheckbox = document.querySelector("#rememberMe");
-    
-                // Check if a remembered password exists and fill in the password input field
-                const rememberedPassword = localStorage.getItem('rememberedPassword');
-                if (rememberedPassword) {
-                    passwordInput.value = rememberedPassword;
-                    rememberMeCheckbox.checked = true;
-                }
-    
-                // Add an event listener to the login form
-                loginForm.addEventListener("submit", function (e) {
-                    e.preventDefault(); // Prevent the form from actually submitting
-    
-                    // Get the entered email and password
-                    const enteredEmail = emailInput.value;
-                    const enteredPassword = passwordInput.value;
-    
-                    // Retrieve the user data from local storage
-                    const userDataJSON = localStorage.getItem('userData');
-                    if (userDataJSON) {
-                        const userData = JSON.parse(userDataJSON);
-    
-                        // Check if the entered email and password match the saved data
-                        if (enteredEmail === userData.email && enteredPassword === userData.password) {
-                            // Successful login
-                            if (rememberMeCheckbox.checked) {
-                                // Save the password to local storage if "Remember Me" is checked
-                                localStorage.setItem('rememberedPassword', enteredPassword);
-                            }
-                            alert('Login successful!');
-                        } else {
-                            // Login failed
-                            alert('Login failed. Please check your credentials.');
-                        }
-                    } else {
-                        // User data not found
-                        alert('User data not found. Please sign up first.');
-                    }
-                });
-            } else {
-                // Local storage is not supported
-                alert("Local storage is not supported in your browser.");
-            }
-        });
-   </script>
-    
     <script src="info/login.js"></script>
+    <script src="https://kit.fontawesome.com/e530c905e1.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    
 </body>
 </html>
