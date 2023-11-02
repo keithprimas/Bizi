@@ -26,8 +26,17 @@ EndUser.init(
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                len: [10]
-            }
+                min: [10]
+            },
+
+        },
+        firstName: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        lastName: {
+            type: DataTypes.STRING,
+            allowNull: false,
         }
     },
     {

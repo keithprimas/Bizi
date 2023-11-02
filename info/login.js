@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // You can add a success message here if needed
             alert("Sign Up successful!");
+            
         });
     } else {
         // Local storage is not supported
