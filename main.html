@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+</head>
+
+<body>
+    <header class="text-left text-lg-start fixed-top">
+            <h1>resuME</h1>
+            <h2>AVT and Username</h2>
+            <button id="logoutButton">Logout</button>   
+    </header>
+
+    <div class="container">
+        <h2>My Resumes</h2>
+        <button id="createNewButton">Create New</button>
+        <button id="openExistingButton">Edit Existing</button>
+        <div id="content">
+            <!-- Handlebars template will be rendered here -->
+        </div>
+    </div>
+
+    <footer class="text-center text-lg-start fixed-bottom">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); color: white">
+          © 2023 All Rights Reserved: By Keith Primas, Alejandro Reyes-Solis, and Ben Palacpac
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <!-- Include Handlebars.js library -->
+    <script src="handlebars.js"></script>
+    <!-- Include your Handlebars templates -->
+    <script id="button-template" type="text/x-handlebars-template">
+        <!-- This is where your Handlebars template goes -->
+    </script>
+    <!-- Your JavaScript code goes here -->
+    <script src="your-script.js"></script>
+
+</body>
+</html>
