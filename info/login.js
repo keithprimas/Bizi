@@ -17,7 +17,7 @@ loginButton.addEventListener('click', (e) => {
 
     // Check if the entered email and password match the saved values
     if (enteredEmail === savedEmail && enteredPassword === savedPassword) {
-        console.log('Welcome!');
+        console.log('Welcome!'); // **Need to change this to You're logged in!**
     } else {
         console.log('Login failed. Please check your email and password.');
     }
@@ -54,7 +54,7 @@ loginButton.addEventListener('click', (e) => {
     if (savedPassword) {
         loginPassword.value = savedPassword;
     }
-
+    // **need to add a cookie to save user email**
     // Add a change event listener to the "Remember Me" checkbox
     rememberMeCheckbox.addEventListener('change', () => {
         if (rememberMeCheckbox.checked) {
@@ -63,7 +63,7 @@ loginButton.addEventListener('click', (e) => {
         } else {
             // Remove the saved password cookie
             document.cookie = 'savedPassword=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-        }
+        } // ** need to add a cookie to save the user email as well ** 
     });
 
       // Get the "Forgot Password" button and the password reset dropdown by their IDs

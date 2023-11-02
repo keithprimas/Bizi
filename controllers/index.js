@@ -12,3 +12,5 @@ router.use('/api', apiRoutes);
 
 
 module.exports = router;
+
+// add another index.js file for api for user routes 
