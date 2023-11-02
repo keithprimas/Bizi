@@ -17,7 +17,11 @@ loginButton.addEventListener('click', (e) => {
 
     // Check if the entered email and password match the saved values
     if (enteredEmail === savedEmail && enteredPassword === savedPassword) {
+<<<<<<< HEAD
         console.log("You're logged in!");
+=======
+        console.log('Welcome!'); // **Need to change this to You're logged in!**
+>>>>>>> 8fddf92bb35ac04136f005f75af819936a49c85a
     } else {
         console.log("Login failed. Please check your email and password.");
     }
@@ -75,8 +79,22 @@ rememberMeCheckbox.addEventListener('change', () => {
         document.cookie = 'savedPassword=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
         document.cookie = 'savedEmail=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
     }
+<<<<<<< HEAD
 });
 
+=======
+    // **need to add a cookie to save user email**
+    // Add a change event listener to the "Remember Me" checkbox
+    rememberMeCheckbox.addEventListener('change', () => {
+        if (rememberMeCheckbox.checked) {
+            // Save the password as a cookie with a 30-day expiration
+            setCookie('savedPassword', loginPassword.value, 30);
+        } else {
+            // Remove the saved password cookie
+            document.cookie = 'savedPassword=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+        } // ** need to add a cookie to save the user email as well ** 
+    });
+>>>>>>> 8fddf92bb35ac04136f005f75af819936a49c85a
 
       // Get the "Forgot Password" button and the password reset dropdown by their IDs
       const forgotPasswordButton = document.querySelector('.btn-link');
