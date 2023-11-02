@@ -17,54 +17,66 @@ loginButton.addEventListener('click', (e) => {
 
     // Check if the entered email and password match the saved values
     if (enteredEmail === savedEmail && enteredPassword === savedPassword) {
-        console.log('Welcome!');
+        console.log("You're logged in!");
     } else {
-        console.log('Login failed. Please check your email and password.');
+        console.log("Login failed. Please check your email and password.");
     }
 });
 
+function deletePasswordCookie() {
+    document.cookie = 'savedPassword=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+}
+
 
     // Function to set a cookie with an expiration date
-    function setCookie(name, value, days) {
-        const date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        const expires = "expires=" + date.toUTCString();
-        document.cookie = name + "=" + value + ";" + expires + ";path=/";
-    }
+function setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
 
-    // Function to get a cookie by name
-    function getCookie(name) {
-        const decodedCookie = decodeURIComponent(document.cookie);
-        const cookies = decodedCookie.split(';');
-        for (let i = 0; i < cookies.length; i++) {
-            const cookie = cookies[i].trim();
-            if (cookie.startsWith(name + "=")) {
-                return cookie.substring(name.length + 1);
-            }
+// Function to get a cookie by name
+function getCookie(name) {
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const cookies = decodedCookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        if (cookie.startsWith(name + "=")) {
+            return cookie.substring(name.length + 1);
         }
-        return null;
     }
+    return null;
+}
 
-    // Get the "Remember Me" checkbox and password input field by their IDs
-    const rememberMeCheckbox = document.getElementById('rememberMe');
-    const loginPassword = document.getElementById('login-password');
+// Get the "Remember Me" checkbox and password input field by their IDs
+const rememberMeCheckbox = document.getElementById('rememberMe');
+const loginPassword = document.getElementById('login-password');
+const loginEmail = document.getElementById('login-email');
 
-    // Check if there is a saved password in the cookie
-    const savedPassword = getCookie('savedPassword');
-    if (savedPassword) {
-        loginPassword.value = savedPassword;
+// Check if there is a saved password in the cookie
+const savedPassword = getCookie('savedPassword');
+const savedEmail = getCookie('savedEmail');
+
+// Set the password input field and email field if there are saved values
+if (savedPassword && savedEmail) {
+    loginPassword.value = savedPassword;
+    loginEmail.value = savedEmail;
+}
+
+// Add a change event listener to the "Remember Me" checkbox
+rememberMeCheckbox.addEventListener('change', () => {
+    if (rememberMeCheckbox.checked) {
+        // Save the email and password as cookies with a 30-day expiration
+        setCookie('savedPassword', loginPassword.value, 30);
+        setCookie('savedEmail', loginEmail.value, 30);
+    } else {
+        // Remove the saved email and password cookies
+        document.cookie = 'savedPassword=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+        document.cookie = 'savedEmail=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
     }
+});
 
-    // Add a change event listener to the "Remember Me" checkbox
-    rememberMeCheckbox.addEventListener('change', () => {
-        if (rememberMeCheckbox.checked) {
-            // Save the password as a cookie with a 30-day expiration
-            setCookie('savedPassword', loginPassword.value, 30);
-        } else {
-            // Remove the saved password cookie
-            document.cookie = 'savedPassword=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-        }
-    });
 
       // Get the "Forgot Password" button and the password reset dropdown by their IDs
       const forgotPasswordButton = document.querySelector('.btn-link');
@@ -76,23 +88,25 @@ loginButton.addEventListener('click', (e) => {
           passwordResetDropdown.style.display = 'block';
       });
   
-      // Handle the password reset
-      const resetPasswordButton = document.getElementById('reset-password-button');
-      resetPasswordButton.addEventListener('click', () => {
-          const resetEmail = document.getElementById('reset-email').value;
-          const newPassword = document.getElementById('new-password').value;
-  
-          // Save the new password to local storage
-          localStorage.setItem('password', newPassword);
-  
-          // You can add code here to handle the password reset process (e.g., send a confirmation email).
-          // For this example, we'll log a message to the console.
-          console.log('Password reset requested for email: ' + resetEmail);
-  
-          // Hide the password reset dropdown after handling the request
-          passwordResetDropdown.style.display = 'none';
-      });
+  // Handle the password reset
+const resetPasswordButton = document.getElementById('reset-password-button');
+resetPasswordButton.addEventListener('click', () => {
+    const resetEmail = document.getElementById('reset-email').value;
+    const newPassword = document.getElementById('new-password').value;
 
+    // Delete the old password cookie
+    deletePasswordCookie();
+
+    // Save the new password to local storage
+    localStorage.setItem('password', newPassword);
+
+    // You can add code here to handle the password reset process (e.g., send a confirmation email).
+    // For this example, we'll log a message to the console.
+    console.log('Password reset requested for email: ' + resetEmail);
+
+    // Hide the password reset dropdown after handling the request
+    passwordResetDropdown.style.display = 'none';
+});
 
 
 
