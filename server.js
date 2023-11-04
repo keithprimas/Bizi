@@ -15,7 +15,7 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 // Serve static files
-app.use(express.static(path.join(__dirname, 'View/layouts')));
+app.use(express.static(path.join(__dirname,'/Public')));
 
 // Use express-session middleware
 app.use(
@@ -26,9 +26,10 @@ app.use(
   })
 );
 
+
 // Define your routes here
 app.get('/', (req, res) => {
-  res.render('index', { layout: 'login'});
+  res.render('main', {layout: 'index'});
 });
 
 // Other middleware and routes can be added here
