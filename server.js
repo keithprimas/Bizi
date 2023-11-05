@@ -34,6 +34,7 @@ app.get('/', (req, res) => {
   res.render('main', {layout: 'index'});
 });
 
+
 Sequelize.sync({ force: false }).then(() => {
   // Server is listening
   app.listen(PORT, () => {
