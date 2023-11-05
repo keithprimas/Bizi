@@ -1,5 +1,4 @@
-{{!-- reference all.handlebars --}}
-
+{{!-- digital business card --}}
 
 {{!-- Contact Info: --}}
     {{!-- Name
@@ -51,23 +50,6 @@
 </div>
 
 
-{{!-- Pic? --}}
-
-////////////////////////////////////
-
-{{!-- <div class="add-headshot-container">
-    <h2>Your Picture Here!</h2>
-    <form class="headshot-form">
-        <label for="headshot">
-            Upload Picture:
-        </label>
-        <br />
-        
-    </form>
-</div> --}}
-
-
-
 {{!-- Personal Profile --}}
 
 ////////////////////////////////////
@@ -76,7 +58,7 @@
     <h2>Personal Profile</h2>
     <form class="personal-form">
         <label for="personal">
-            Background/Experience:
+            What I do for You:
         </label>
         <br />
         <textarea name="personal" id="personal" cols="30" rows="10">
@@ -86,60 +68,13 @@
     </form>
 </div>
 
-
-
-{{!-- Education --}}
+{{!-- Job Title and COmpany --}}
 
 //////////////////////////////////// 
 
-<div class="education">
-    <h2>Education</h2>
-    <form class="education-form">
-        <label for="education">
-            Degree:
-        </label>
-        <br />
-        <textarea name="education" id="education" cols="30" rows="10">
-            {{education}}
-        </textarea>
-        <br />        
-    </form>
-</div>
-
-
-
-{{!-- Career Highlights n Accolades --}}
-
-//////////////////////////////////// 
-
-<div class="highlights">
-    <h2>Career Highlights</h2>
-    <form class="highlights-form">
-        <label for="highlights">
-            Accomplishments/Accolades:
-        </label>
-        <br />
-        <textarea name="highlights" id="highlights" cols="30" rows="10">
-            {{highlights}}
-        </textarea>
-        <br />        
-    </form>
-</div>
-
-
-
-
-{{!-- JobOne --}}
-    {{!-- Title
-    Company 
-    Dates Employed
-    Job Description --}}
-
-//////////////////////////////////// 
-
-<div class="add-work-history-container">
+<div class="add-job-container">
     <h2>
-        Work History
+        Work
     </h2>
     <form class="job-one-form">
         <label for="title">
@@ -158,54 +93,15 @@
             {{company}}
         </textarea>
         <br />
-        <label for="dates_emplyed">
-            Dates Employed:
-        </label>
-        <br />
-        <textarea name="dates_employed" id="dates_employed" cols="30" rows="10">
-            {{dates_employed}}
-        </textarea>
-        <br />
-        <label for="job_description">
-            Job Description:
-        </label>
-        <br />
-        <textarea name="job_description" id="job_description" cols="30" rows="10">
-            {{job_description}}
-        </textarea>
-        <br />
         <button type="submit" value="Submit">
         Submit
         </button>
     </form>
 </div>
 
-//////////////////////////////////// //////////////////////////////////// //////////////////////////////////// //////////////////////////////////// 
-{{!-- not sure if we need  more job forms, we could just find a way to loop through job one and let user resubmit --}}
-//////////////////////////////////// //////////////////////////////////// //////////////////////////////////// //////////////////////////////////// 
 
 
 
 
-{{!-- JobTwo --}}
-        {{!-- Title
-    Company 
-    Dates Employed
-    Job Description --}}
 
-//////////////////////////////////// 
-
-{{!-- JobThree --}}
-        {{!-- Title
-    Company 
-    Dates Employed
-    Job Description --}}
-
-//////////////////////////////////// 
-
-{{!-- JobFour --}}
-        {{!-- Title
-    Company 
-    Dates Employed
-    Job Description --}}
 
