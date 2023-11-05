@@ -6,7 +6,7 @@
                   <div class="card border-0" id="login-section">
                       <div class="card-body bg-light">
                           <!-- Login Form -->
-                          <form action="/login" method="POST">
+                          <form>
                               <div class="form-group" style="padding-bottom: 10px;">
                                   <label for="email">Email</label>
                                   <input type="text" class="form-control" id="login-email" placeholder="Enter email address">
@@ -20,7 +20,6 @@
                                   <label class="form-check-label" for="rememberMe">Remember Me</label>
                               </div>
                               <button type="button" class="btn btn-link link-underline link-underline-opacity-0" style="color: #7ac8ff; font-weight: bold; letter-spacing: 2px;">Forgot Password?</button>
-                              {{loggedIn}}
                               <button type="submit" id="login-button" class="btn btn-success float-right">Login</button>
                              
                       </div>
@@ -30,7 +29,7 @@
                   <div class="card border-0" id="signup-section">
                       <div class="card-body bg-light">
                           <!-- Signup Form -->
-                          <form action="/signup" method="POST">
+                          <form>
                               <h2 class="text-center" style="color: #7ac8ff;">Sign Up!</h2>
                               <div class="form-group" style="padding-bottom: 10px;">
                                   <label for="firstName">First Name</label>
@@ -48,7 +47,6 @@
                                   <label for="signup-password">Password</label>
                                   <input type="password" name="password" class="form-control" id="signup-password" placeholder="Choose a password">
                               </div>
-                              {{signIn}}
                               <button type="button" id="signup-button" class="btn btn-primary">Sign Up
                                 
                               </button>
@@ -69,10 +67,3 @@
           </div>
           <!-- Copyright -->
       </footer>
-
-      <script src="/resuME/Public/login.js"></script>
-
-
-
-    
-
