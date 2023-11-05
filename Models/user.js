@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
-const sequelize = require('./sequelize'); 
+const sequelize = require('../Connection/config'); 
 
 class EndUser extends Model {
     async hashPassword() {
