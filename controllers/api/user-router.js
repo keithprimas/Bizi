@@ -1,26 +1,54 @@
 const router = require('express').Router();
 const { User } = require('../../Models'); 
 
-router.post('/', async (req, res) => {
+router.post('/', async (req, res) => { // need to redo this 
+   try {
+    const dbUserData = await User.create ({
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
+        email: req.body.email,
+        password: req.body.password,
+    });
+
+    req.session.save(() => {
+        req.session.loggedIn = true;
+
+        res.status(200).json(dbUserData);
+    }); 
+   } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+   }
+});
+
+
+router.post('/login', async (req, res) => {
     try {
-        // Create a new user
-        const newPerson = await User.create({
-            email: req.body.email, 
-            password: req.body.password,
+        const dbUserData = await User.findOne({
+            where: {
+                email: req.body.email,
+            },
         });
 
-        // Store user data in the session
-        req.session.email = newPerson.email; 
-        req.session.logIn = true;
+        if (!dbUserData) {
+            return res.status(400).json({ alert: 'Incorrect email or password!' });
+        }
 
-        // need to add res.session.save() => {} using a res.status(200).json
+        const validPassword = await dbUserData.checkPassword(req.body.password);
 
-        res.json(newUser);
+        if (!validPassword) {
+            return res.status(400).json({ alert: 'Incorrect email or password' });
+        }
+
+        req.session.save(() => {
+            req.session.loggedIn = true;
+
+            return res.status(200).json({ user: dbUserData, message: 'Welcome!' });
+        });
     } catch (error) {
-        res.status(500).json(error);
+        console.error(error);
+        return res.status(500).json(error);
     }
-    // need to add vaildpassword to check password
-    // need a way to log the user out of the hompage by using a redirect 
 });
 
 module.exports = router;
