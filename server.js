@@ -7,6 +7,8 @@ const helpers = require('./Utils/helpers');
 const hbs = exphbs.create({ helpers });
 
 
+
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -26,13 +28,11 @@ app.use(
   })
 );
 
+app.use(express.urlencoded({extended: false}))
 
-// Define your routes here
 app.get('/', (req, res) => {
   res.render('main', {layout: 'index'});
 });
-
-// Other middleware and routes can be added here
 
 Sequelize.sync({ force: false }).then(() => {
   // Server is listening
