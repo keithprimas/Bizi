@@ -1,0 +1,12 @@
+body {
+    background-color: #7ac8ff;;
+    font-family: 'Roboto', sans-serif;
+}
+
+.material-symbols-outlined {
+    font-size: 70px;
+    color: yellow;
+    position: relative;
+    top: 10px;
+  }
+  

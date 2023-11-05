@@ -6,11 +6,9 @@ const exphbs = require('express-handlebars');
 const helpers = require('./Utils/helpers');
 const hbs = exphbs.create({ helpers });
 
-
-
-
 const app = express();
 const PORT = process.env.PORT || 3001;
+
 
 // Set up Handlebars view engine
 app.engine('handlebars', hbs.engine);
@@ -35,9 +33,16 @@ app.get('/', (req, res) => {
 });
 
 
+
+
 Sequelize.sync({ force: false }).then(() => {
   // Server is listening
   app.listen(PORT, () => {
     console.log("Server is running on port " + PORT);
   });
 });
+
+
+
+
+
