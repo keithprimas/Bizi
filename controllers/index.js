@@ -1,16 +1,13 @@
 const router = require('express').Router();
 
 const apiRoutes = require('./api/');
-// add homepage api once the api js has been made 
-// add input api once the api js has been made 
+const hompageroutes = require('./homepage-routes.js');
 
 
 router.use('/api', apiRoutes);
-// add router.use(hompage, hompageroutes)
-// router input api here
+router.use('/', hompageroutes)
 
 
 
 module.exports = router;
 
-// add another index.js file for api for user routes 

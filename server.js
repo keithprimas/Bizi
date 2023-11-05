@@ -31,6 +31,10 @@ app.use(express.urlencoded({extended: false}))
 app.get('/', (req, res) => {
   res.render('main', {layout: 'index'});
 });
+app.get('/resuME/Public/login.js', (req, res) => {
+  res.setHeader('Content-Type', 'text/javascript');
+  // Serve the JavaScript file here
+});
 
 
 
