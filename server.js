@@ -41,22 +41,7 @@ app.use(express.static(path.join(__dirname, 'Public')));
 
 app.use(routes);
 
-<<<<<<< HEAD
-app.use(express.urlencoded({extended: false}))
-
-app.get('/', (req, res) => {
-  res.render('main', {layout: 'index'});
-});
-app.get('/resuME/Public/login.js', (req, res) => {
-  res.setHeader('Content-Type', 'text/javascript');
-  // Serve the JavaScript file here
-});
-
-
-Sequelize.sync({ force: false }).then(() => {
-=======
 sequelize.sync({ force: false }).then(() => {
->>>>>>> bae52d737e4b078c3036c327e417b03c751fc1d0
   // Server is listening
   app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
