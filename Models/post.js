@@ -20,3 +20,5 @@ Post.init (
 );
 
 module.exports = Post;
+
+// Need to work on this when we get there - Alejandro
