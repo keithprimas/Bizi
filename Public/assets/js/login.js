@@ -6,17 +6,18 @@ const loginFormHandler = async (event) => {
   if (email && password) {
     try {
       // need to find the right api - Alejandro  
-      const response = await fetch('/api/user/login', {
+      const response = await fetch('/api/users/login', {
         method: 'POST',
         body: JSON.stringify({ email, password }),
         headers: { 'Content-Type': 'application/json' },
       });
       if (response.ok) {
+        window.location.reload();
         // Process the API response, if needed
         // Example: const data = await response.json();
 
       } else {
-        alert('Failed to log in.');
+        console.log('Failed to log in');
       }
     } catch (error) {
       console.error('Error:', error);
@@ -26,16 +27,16 @@ const loginFormHandler = async (event) => {
 
 const signupFormHandler = async (event) => {
   event.preventDefault();
-  const firstName = document.querySelector('#firstName').value.trim();
-  const lastName = document.querySelector('#lastName').value.trim();
+  const firstname = document.querySelector('#firstName').value.trim();
+  const lastname = document.querySelector('#lastName').value.trim();
   const email = document.querySelector('#signup-email').value.trim();
   const password = document.querySelector('#signup-password').value.trim();
-  if (firstName && lastName && email && password) {
+  if (firstname && lastname && email && password) {
     try {
       // need to fix this get to fetch main api
-      const response = await fetch('/', {
+      const response = await fetch('/api/users', {
         method: 'POST',
-        body: JSON.stringify({ firstName, lastName, email, password }),
+        body: JSON.stringify({ firstname, lastname, email, password }),
         headers: { 'Content-Type': 'application/json' },
       });
       if (response.ok) {
@@ -45,7 +46,7 @@ const signupFormHandler = async (event) => {
         // Perform client-side redirection after a successful response
         window.location.href = '/';
       } else {
-        alert('Failed to sign up.');
+        console.log('Failed to sign up.');
       }
     } catch (error) {
       console.error('Error:', error);
