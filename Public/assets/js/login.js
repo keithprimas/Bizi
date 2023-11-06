@@ -32,7 +32,7 @@ const signupFormHandler = async (event) => {
   const password = document.querySelector('#signup-password').value.trim();
   if (firstName && lastName && email && password) {
     try {
-      // need to fix this get to fetch main api
+      // need to fix this get to fetch main api -Alejandro 
       const response = await fetch('/', {
         method: 'POST',
         body: JSON.stringify({ firstName, lastName, email, password }),
