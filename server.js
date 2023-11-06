@@ -37,8 +37,6 @@ app.get('/resuME/Public/login.js', (req, res) => {
 });
 
 
-
-
 Sequelize.sync({ force: false }).then(() => {
   // Server is listening
   app.listen(PORT, () => {
