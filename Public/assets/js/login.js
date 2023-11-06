@@ -1,10 +1,12 @@
+// Need to check on this keep getting alert when trying to sign up- Alejandro
 const loginFormHandler = async (event) => {
   event.preventDefault();
   const email = document.querySelector('#login-email').value.trim();
   const password = document.querySelector('#login-password').value.trim();
   if (email && password) {
     try {
-      const response = await fetch('/api', {
+      // need to find the right api - Alejandro
+      const response = await fetch('/api/user/login', {
         method: 'POST',
         body: JSON.stringify({ email, password }),
         headers: { 'Content-Type': 'application/json' },
@@ -13,8 +15,6 @@ const loginFormHandler = async (event) => {
         // Process the API response, if needed
         // Example: const data = await response.json();
 
-        // Perform client-side redirection after a successful response
-        window.location.href = '/';
       } else {
         alert('Failed to log in.');
       }
@@ -32,6 +32,7 @@ const signupFormHandler = async (event) => {
   const password = document.querySelector('#signup-password').value.trim();
   if (firstName && lastName && email && password) {
     try {
+      // need to fix this get to fetch main api
       const response = await fetch('/', {
         method: 'POST',
         body: JSON.stringify({ firstName, lastName, email, password }),
@@ -42,7 +43,7 @@ const signupFormHandler = async (event) => {
         // Example: const data = await response.json();
 
         // Perform client-side redirection after a successful response
-        window.location.href = '../.input.html';
+        window.location.href = '/';
       } else {
         alert('Failed to sign up.');
       }
