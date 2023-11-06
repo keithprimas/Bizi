@@ -9,4 +9,52 @@ body {
     position: relative;
     top: 10px;
   }
+
+  .centered-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.rectangular-button {
+    width: 400px;
+    position: relative;
+    top: 40px;
+    height: 200px;
+    border: none;
+    border-radius: 0;
+    background-color: white; /* Blue background color */
+    color: rgb(4, 233, 4); /* White text color */
+    font-size: 100px;
+    text-align: center;
+    line-height: 200px;
+    cursor: pointer;
+}
+
+.header {
+    position: relative;
+    top: 270px; /* Adjust the vertical position as needed */
+    left: 50%;
+    font-size: 50px;
+    transform: translateX(-50%);
+    text-align: center;
+    color: yellow;
+}
+
+/* Style the logout button */
+.logout-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.top-left-header {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 70px;
+    color: yellow;
+}
   
