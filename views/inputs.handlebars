@@ -1,103 +1,113 @@
 {{!-- digital business card --}}
 
-{{!-- Contact Info: --}}
-    {{!-- Name
-    Email
-    Phone
-    Location: --}}
+    {{!-- Contact Info: --}}
+        {{!-- Name
+        Email
+        Phone
+        Location: --}}
 
-////////////////////////////////////  
+<div class="card border-0" id="inputs-section">
 
+    <div class="add-contact-info-container">
+        <h2>
+            Contact Info
+        </h2>
+        <form class="contact-info-form">
+            <label for="user_name">
+                Name:
+            </label>
+            <br />
+            <textarea name="user_name" id="user_name" cols="30" rows="10">
+                {{user_name}}        
+            </textarea>
+            <br />
+            <label for="email_address">
+                Email:
+            </label>
+            <br />
+            <textarea name="email_address" id="email_address" cols="30" rows="10">
+                {{email_address}}
+            </textarea>
+            <br />
+            <label for="phone_number">
+                Phone:
+            </label>
+            <br/>
+            <textarea name="phone_number" id="phone_number" cols="30" rows="10">
+                {{phone_number}}
+            </textarea>
+            <br />
+            <label for="location">
+                City, State:
+            </label>
+            <br />
+            <textarea name="location" id="location" cols="30" rows="10">
+                {{location}}
+            </textarea>
+            <br />        
+        </form>
+    </div>
 
-<div class="add-contact-info-container">
-    <h2>
-        Contact Info
-    </h2>
-    <form class="contact-info-form">
-        <label for="user_name">
-            Name:
-        </label>
-        <br />
-        <textarea name="user_name" id="user_name" cols="30" rows="10">
-            {{user_name}}        
-        </textarea>
-        <br />
-        <label for="email_address">
-            Email:
-        </label>
-        <br />
-        <textarea name="email_address" id="email_address" cols="30" rows="10">
-            {{email_address}}
-        </textarea>
-        <br />
-        <label for="phone_number">
-            Phone:
-        </label>
-        <br/>
-        <textarea name="phone_number" id="phone_number" cols="30" rows="10">
-            {{phone_number}}
-        </textarea>
-        <br />
-        <label for="location">
-            City, State:
-        </label>
-        <br />
-        <textarea name="location" id="location" cols="30" rows="10">
-            {{location}}
-        </textarea>
-        <br />        
-    </form>
+    {{!-- Personal Profile --}}
+        {{!-- What I do for You:
+            personal snippet --}}
+
+    <div class="personal-snippet">
+        <h2>Personal Profile</h2>
+        <form class="personal-form">
+            <label for="personal">
+                What I do for You:
+            </label>
+            <br />
+            <textarea name="personal" id="personal" cols="30" rows="10">
+                {{personal}}
+            </textarea>
+            <br />        
+        </form>
+    </div>
+
+    {{!-- Job Title and Company --}}
+        {{!-- Work:
+            Job Title
+            Company Name --}}
+        
+    <div class="add-job-container">
+        <h2>
+            Work
+        </h2>
+        <form class="job-one-form">
+            <label for="title">
+                Title:
+            </label>
+            <br />
+            <textarea name="title" id="title" cols="30" rows="10">
+                {{title}}        
+            </textarea>
+            <br />
+            <label for="company">
+                Company Name:
+            </label>
+            <br />
+            <textarea name="company" id="company" cols="30" rows="10">
+                {{company}}
+            </textarea>
+            <br />
+            <button type="submit" value="Submit">
+            Submit
+            </button>
+        </form>
+    </div>
 </div>
 
+<footer class="text-center text-lg-start fixed-bottom">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); color: white">
+        © 2023 All Rights Reserved: By Keith Primas, Alejandro Reyes-Solis, and Ben Palacpac
+    </div>
+    <!-- Copyright -->
+</footer>
 
-{{!-- Personal Profile --}}
-
-////////////////////////////////////
-
-<div class="personal-profile">
-    <h2>Personal Profile</h2>
-    <form class="personal-form">
-        <label for="personal">
-            What I do for You:
-        </label>
-        <br />
-        <textarea name="personal" id="personal" cols="30" rows="10">
-            {{personal}}
-        </textarea>
-        <br />        
-    </form>
-</div>
-
-{{!-- Job Title and COmpany --}}
-
-//////////////////////////////////// 
-
-<div class="add-job-container">
-    <h2>
-        Work
-    </h2>
-    <form class="job-one-form">
-        <label for="title">
-            Title:
-        </label>
-        <br />
-        <textarea name="title" id="title" cols="30" rows="10">
-            {{title}}        
-        </textarea>
-        <br />
-        <label for="company">
-            Company Name:
-        </label>
-        <br />
-        <textarea name="company" id="company" cols="30" rows="10">
-            {{company}}
-        </textarea>
-        <br />
-        <button type="submit" value="Submit">
-        Submit
-        </button>
-    </form>
-</div>
+<script src="/assets/js/inputs.js"></script>
 
 
 
