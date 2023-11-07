@@ -58,9 +58,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.post('/home');
 
-console.log('Please redirect to home page please ')
 
 
 
