@@ -12,7 +12,7 @@ const loginFormHandler = async (event) => {
         headers: { 'Content-Type': 'application/json' },
       });
       if (response.ok) {
-        window.location.reload();
+        window.location.href = '/';
         // Process the API response, if needed
         // Example: const data = await response.json();
 
