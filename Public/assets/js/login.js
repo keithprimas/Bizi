@@ -6,7 +6,7 @@ const loginFormHandler = async (event) => {
   if (email && password) {
     try {
       // need to find the right api - Alejandro  
-      const response = await fetch('/api/users/login', {
+      const response = await fetch('/', {
         method: 'POST',
         body: JSON.stringify({ email, password }),
         headers: { 'Content-Type': 'application/json' },
@@ -33,8 +33,8 @@ const signupFormHandler = async (event) => {
   const password = document.querySelector('#signup-password').value.trim();
   if (firstname && lastname && email && password) {
     try {
-      // need to fix this get to fetch main api
-      const response = await fetch('/api/users', {
+      // need to fix this get to fetch main api -Alejandro 
+      const response = await fetch('/', {
         method: 'POST',
         body: JSON.stringify({ firstname, lastname, email, password }),
         headers: { 'Content-Type': 'application/json' },
