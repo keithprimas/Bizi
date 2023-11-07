@@ -34,7 +34,7 @@ const signupFormHandler = async (event) => {
   if (firstname && lastname && email && password) {
     try {
       // need to fix this get to fetch main api -Alejandro 
-      const response = await fetch('/api/users', {
+      const response = await fetch('/', {
         method: 'POST',
         body: JSON.stringify({ firstname, lastname, email, password }),
         headers: { 'Content-Type': 'application/json' },
