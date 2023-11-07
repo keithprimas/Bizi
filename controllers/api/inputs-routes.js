@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const Input = require('../../Models'); 
-// need to set path for what Input needs to require. '../../Models'??
 
 // route to create a card
 router.post('/', async (req, res) => {
@@ -19,6 +18,14 @@ router.post('/', async (req, res) => {
     res.status(400).json(err);
   }
 });
+
+//Need to finish this - Alejandro 
+router.get('/', async (req, res) =>{
+  res.render('inputs', {layout: 'main' })
+});
+console.log('Please redirect to home page please ')
+
+
 
 router.put('/:id', async (req, res) => {
     // sending the data to the Model so user info can be updated with new data in the database.

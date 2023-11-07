@@ -1,6 +1,15 @@
 const router = require('express').Router();
 const { User } = require('../../Models'); 
 
+
+router.get('/', async (req, res) => {
+  res.render('login', { layout: 'main' });
+});
+
+router.get('/', async (req, res) =>{
+  res.render('home', {layout: 'main' })
+});
+
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
@@ -48,5 +57,13 @@ router.post('/login', async (req, res) => {
     res.status(400).json(err);
   }
 });
+
+
+
+
+
+
+
+
 
 module.exports = router;
