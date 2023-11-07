@@ -12,18 +12,21 @@ const loginFormHandler = async (event) => {
         headers: { 'Content-Type': 'application/json' },
       });
       if (response.ok) {
+        Swal.fire("Welcome!");
         window.location.reload();
         // Process the API response, if needed
         // Example: const data = await response.json();
 
       } else {
-        console.log('Failed to log in');
+        Swal.fire("Failed to log in");
       }
     } catch (error) {
       console.error('Error:', error);
     }
   }
 };
+
+
 
 const signupFormHandler = async (event) => {
   event.preventDefault();
@@ -40,13 +43,10 @@ const signupFormHandler = async (event) => {
         headers: { 'Content-Type': 'application/json' },
       });
       if (response.ok) {
-        // Process the API response, if needed
-        // Example: const data = await response.json();
-
-        // Perform client-side redirection after a successful response
+        Swal.fire("Thank you for signing up!");
         window.location.href = '/';
       } else {
-        console.log('Failed to sign up.');
+       window.alert = Swal.fire("Failed to sign up. Please check all fields");
       }
     } catch (error) {
       console.error('Error:', error);
