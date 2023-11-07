@@ -1,3 +1,10 @@
 DROP DATABASE IF EXISTS bizi_db;
 
 CREATE DATABASE bizi_db;
+
+
+
+
+
+
+

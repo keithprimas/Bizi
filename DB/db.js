@@ -2,7 +2,7 @@ const { Sequelize, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 
 // Create a Sequelize instance and specify the database connection parameters
-const sequelize = new Sequelize('login_db', 'root', '5ZAkQ*ob&', {
+const sequelize = new Sequelize('bizi_db', 'root', '5ZAkQ*ob&', {
     host: 'localhost',
     dialect: 'mysql',
   });
