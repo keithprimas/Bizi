@@ -2,16 +2,14 @@ const router = require('express').Router();
 
 const apiRoutes = require('./api'); // prob need to check this
 const hompageroutes = require('./homepage-routes'); // this too 
-const userRoutes = require('./api/user-router');
+const userRoutes = require('./api/user-router')
+const inputsroute = require('./api/inputs-routes');
 
-const inputRoutes = require('./input-routes');
-//const inputApiRoutes = require('./api/user-router');
-
-// need to check if these work properly 
+// need to check if these work properly... Need to get homeroute or input route to work
 router.use('/', hompageroutes);
 router.use('/api', apiRoutes);
 router.use('/login', userRoutes);
-router.use('/input', inputRoutes);
+router.use('/input', inputsroute);
 
 module.exports = router;
 
