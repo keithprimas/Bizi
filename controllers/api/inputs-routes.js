@@ -19,13 +19,6 @@ router.post('/', async (req, res) => {
   }
 });
 
-//Need to finish this - Alejandro 
-// router.get('/', async (req, res) =>{
-//   res.render('home', {layout: 'main' })
-// });
-// console.log('Please redirect to home page please ')
-
-
 
 router.put('/:id', async (req, res) => {
     // sending the data to the Model so user info can be updated with new data in the database.
@@ -47,7 +40,6 @@ router.put('/:id', async (req, res) => {
         }
       );
      
-      // updated data is sent back to handler that dispatched the fetch request.
       res.status(200).json(input);
     } catch (err) {
       res.status(500).json(err);
