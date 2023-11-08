@@ -7,8 +7,6 @@ router.get('/', async (req, res) => {
   // render login or render the builder itself.. based on the req.session's data: 
   // {"cookie":{"originalMaxAge":300000,"expires":"2023-11-06T23:30:40.122Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"user_id":2,"logged_in":true}
 
-  console.log('abc123', JSON.stringify(req.session));
-
   if (req.session.user_id)
   {
     res.render('home', { layout: 'main'});
@@ -18,13 +16,13 @@ router.get('/', async (req, res) => {
 });
 
 
-/// look at this - Alejandro
-if (req.session.login)
-{
-  res.render('home', {layout: main})
-} else {
-  res.redirect(302, '/home');
-};
+/// look at this - Alejandro this is messed up 
+// if (req.session.login)
+// {
+//   res.render('home', { layout: 'main' })
+// } else {
+//   res.redirect(302, '/');
+// };
 
 router.get('/posts', async (req, res) => {
   try {
