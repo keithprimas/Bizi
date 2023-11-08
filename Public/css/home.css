@@ -19,29 +19,35 @@ body {
 
 
 .rectangular-button {
-    width: 400px;
+    width: 500px;
     position: relative;
-    top: 40px;
-    height: 200px;
-    border: none;
+    top: 70px;
+    height: 250px;
+    background-image: url('/assets/cardbg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: solid white 2px;
+    box-shadow: rgb(70, 70, 70) 1px 3px;
     border-radius: 0;
-    background-color: white; /* Blue background color */
     color: rgb(4, 233, 4); /* White text color */
-    font-size: 100px;
+    font-size: 120px;
+    color: white;
     text-align: center;
-    line-height: 200px;
+    line-height: 250px;
     cursor: pointer;
 }
 
+
 .header {
-    position: relative;
-    top: 270px; /* Adjust the vertical position as needed */
+    position: absolute;
+    top: 50%;
     left: 50%;
-    font-size: 50px;
-    transform: translateX(-50%);
+    transform: translate(-50%, -200%);
+    font-size: 65px;
     text-align: center;
     color: yellow;
 }
+
 
 /* Style the logout button */
 .logout-button {
@@ -57,6 +63,5 @@ body {
     font-size: 70px;
     color: yellow;
 }
-
 
   

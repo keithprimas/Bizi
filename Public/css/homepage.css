@@ -6,6 +6,7 @@ body {
   font-family: 'Roboto', sans-serif;
   background-image: url('/assets/bg1.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
