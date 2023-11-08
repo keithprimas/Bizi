@@ -12,8 +12,7 @@ const loginFormHandler = async (event) => {
         headers: { 'Content-Type': 'application/json' },
       });
       if (response.ok) {
-        Swal.fire("Welcome!");
-        window.location.reload();
+        window.location = '/';
         // Process the API response, if needed
         // Example: const data = await response.json();
 

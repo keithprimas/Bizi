@@ -20,10 +20,10 @@ router.post('/', async (req, res) => {
 });
 
 //Need to finish this - Alejandro 
-router.get('/', async (req, res) =>{
-  res.render('inputs', {layout: 'main' })
-});
-console.log('Please redirect to home page please ')
+// router.get('/', async (req, res) =>{
+//   res.render('home', {layout: 'main' })
+// });
+// console.log('Please redirect to home page please ')
 
 
 

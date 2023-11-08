@@ -6,9 +6,9 @@ router.get('/', async (req, res) => {
   res.render('login', { layout: 'main' });
 });
 
-router.get('/', async (req, res) =>{
-  res.render('home', {layout: 'main' })
-});
+// router.get('/', async (req, res) =>{
+//   res.render('home', {layout: 'main' })
+// });
 
 router.post('/', async (req, res) => {
   try {
