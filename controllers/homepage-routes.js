@@ -16,14 +16,6 @@ router.get('/', async (req, res) => {
 });
 
 
-/// look at this - Alejandro this is messed up 
-// if (req.session.login)
-// {
-//   res.render('home', { layout: 'main' })
-// } else {
-//   res.redirect(302, '/');
-// };
-
 router.get('/posts', async (req, res) => {
   try {
     const postData = await Post.findAll({

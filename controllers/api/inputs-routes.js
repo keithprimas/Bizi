@@ -19,13 +19,6 @@ router.post('/', async (req, res) => {
   }
 });
 
-//Need to finish this - Alejandro 
-// router.get('/', async (req, res) =>{
-//   res.render('home', {layout: 'main' })
-// });
-// console.log('Please redirect to home page please ')
-
-
 
 router.put('/:id', async (req, res) => {
     // sending the data to the Model so user info can be updated with new data in the database.
