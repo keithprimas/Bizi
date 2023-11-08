@@ -58,12 +58,16 @@ router.post('/login', async (req, res) => {
   }
 });
 
-
-
-
-
-
-
+// allow user to log out 
+router.post('/logout', (req, res) => {
+  if (res.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  };
+});
 
 
 module.exports = router;
