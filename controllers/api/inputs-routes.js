@@ -47,7 +47,6 @@ router.put('/:id', async (req, res) => {
         }
       );
      
-      // updated data is sent back to handler that dispatched the fetch request.
       res.status(200).json(input);
     } catch (err) {
       res.status(500).json(err);

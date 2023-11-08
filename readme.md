@@ -1,17 +1,16 @@
-# resuME
+# Bizi
 
 ## Description
 
-ResuMe "build yours!"
+Bizi "We know you are!"
 
 	Idea:
 
-		resuME is a resume builder app.  Users input their personal info, a headshot (if they want), work history, and references; 
-			and resuME does the rest. Users can create and save multiple resumes to access, edit, download/upload, or delete at anytime. 
+		Bizi is a digital business card app.  Users can log in to their own profile and input their contact/personal info and generate a digital business card to share with other colleagues and clients. Just feed the app your name, contact info, job title, company, and a short message about yourself and Bizi does the rest.  Changed jobs? Update your Bizi card.  No more waiting for paper cards.  People move and switch jobs all the time.  Why not have a card that's just as flexible as todays job market?
 
 	User Story:
 		
-		As a user, I want to be able to create an account so I can log in to use resuME
+		As a user, I want to be able to create an account so I can log in to use Bizi
 
 		As a user, I want to be able to save my credentials, so I don't have to input my username and password everytime.
 
@@ -21,41 +20,37 @@ ResuMe "build yours!"
 
 		/////////////////////////////////
 
-		As a user I want to be able to add my personal info to resuME 
+		As a user I want to be able to add my personal info to Bizi 
 
-		As a user I want to be able to add a picture of myself to resuME
+		As a user I want to be able to add a picture of myself to Bizi
 		
-		As a user I want to be able to add my educational history.
-
-		As a user I want to be able to add my work experience and references to resuME
+		As a user I want to be able to add my job title and place of employment to Bizi.
 		
-		As a user I want to be able to add my awards, accollades, and activities.
+		As a user I want to have the option to edit my business card after it's built by Bizi
 
-		As a user I want to be able to edit my resume after it's built by resuME
-
-		As a user I want to be able to save, edit, and delete my resumes. 
+		As a user I want to be able to save, edit, and delete my digital business card. 
 
 
 		/////////////////////////////////
 
-		As a user I want to be able to upload my resume to LinkedIn and/or Indeed
-
-		As a user I want to be able to download my resume for personal use.
+		As a user I want to be able to share my business card with others by linking it to a QR code.
 
 		/////////////////////////////////
 
 
 
-- Motivation: Finding a job in today's market has never been more difficult and saving time by using apps has never been more commonplace.
-   resuME is  our answer to quickly build, edit, save and download a resume for personal use. 
-- Why did you build this project? All members of our group are currently learning a brand new set of skills and an application liek resuME would be a great tool for
-   us to use after we gradute and seek new job opportunites.
-- What problem does it solve? It is both a time saver and a convenient place to build and store resumes that are easy to upload to prospective jobs.
-- What did you learn?
+- Motivation:  Job hopping is the new norm in today's working world.  Likewise, digital applications are a wonderful tool to save time and money.
+Bizi is our answer to quickly build, edit, save and download a digital business card for personal use. 
+
+- Why did you build this project? All members of our group are currently learning a brand new set of skills and an application like Bizi would be a great tool for us to use after we gradute and seek new job opportunites.
+
+- What problem does it solve? It is both a time saver and a convenient place to build and store a business card. Why waste time and money designing and ordering new paper business cards whenever you get a new job or earn a new title/position?  No more reaching for a paper card in your wallet and forgeting that you left them at home.
+
+- What did you learn? 
+	Back End is a vicous creature, as is impostor syndrome 
+		~Ben
 
 ## Table of Contents
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
 
 - [Usage](#usage)
 - [Credits](#credits)
@@ -77,15 +72,22 @@ Collaborators:
      
      Benjamin Palacpac:   https://github.com/BenPalac1
 
-Scipt file used:
+Script file used:
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
 
 
     
 Style Library:
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 
    
 
 API used: 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
      
 
@@ -116,3 +118,8 @@ SOFTWARE.
 ---
 
 ## Features
+
+
+
+
+

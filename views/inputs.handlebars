@@ -9,41 +9,41 @@
 <div class="card border-0" id="inputs-section">
 
     <div class="add-contact-info-container">
-        <h2>
+        <h3>
             Contact Info
-        </h2>
+        </h3>
         <form class="contact-info-form">
             <label for="user_name">
                 Name:
             </label>
             <br />
-            <textarea name="user_name" id="user_name" cols="30" rows="10">
+            <input type="text" name="user_name" id="user_name" cols="30" rows="1">
                 {{user_name}}        
-            </textarea>
+            </input>
             <br />
             <label for="email_address">
                 Email:
             </label>
             <br />
-            <textarea name="email_address" id="email_address" cols="30" rows="10">
+            <input type="text" name="email_address" id="email_address" cols="30" rows="1">
                 {{email_address}}
-            </textarea>
+            </input>
             <br />
             <label for="phone_number">
                 Phone:
             </label>
             <br/>
-            <textarea name="phone_number" id="phone_number" cols="30" rows="10">
+            <input type="text" name="phone_number" id="phone_number" cols="30" rows="1">
                 {{phone_number}}
-            </textarea>
+            </input>
             <br />
             <label for="location">
                 City, State:
             </label>
             <br />
-            <textarea name="location" id="location" cols="30" rows="10">
+            <input type="text" name="location" id="location" cols="30" rows="1">
                 {{location}}
-            </textarea>
+            </input>
             <br />        
         </form>
     </div>
@@ -53,13 +53,13 @@
             personal snippet --}}
 
     <div class="personal-snippet">
-        <h2>Personal Profile</h2>
+        <h3>Personal Profile</h3>
         <form class="personal-form">
             <label for="personal">
                 What I do for You:
             </label>
             <br />
-            <textarea name="personal" id="personal" cols="30" rows="10">
+            <textarea name="personal" id="personal" cols="30" rows="1">
                 {{personal}}
             </textarea>
             <br />        
@@ -72,29 +72,30 @@
             Company Name --}}
         
     <div class="add-job-container">
-        <h2>
+        <h3>
             Work
-        </h2>
+        </h3>
         <form class="job-one-form">
             <label for="title">
                 Title:
             </label>
             <br />
-            <textarea name="title" id="title" cols="30" rows="10">
+            <input type="text" name="title" id="title" cols="30" rows="1">
                 {{title}}        
-            </textarea>
+            </input>
             <br />
             <label for="company">
                 Company Name:
             </label>
             <br />
-            <textarea name="company" id="company" cols="30" rows="10">
+            <input type="text" name="company" id="company" cols="30" rows="1">
                 {{company}}
-            </textarea>
+            </input>
             <br />
             <button type="submit" value="Submit">
             Submit
             </button>
+            <br  />
         </form>
     </div>
 </div>
@@ -106,6 +107,7 @@
     </div>
     <!-- Copyright -->
 </footer>
+
 
 <script src="/assets/js/inputs.js"></script>
 
