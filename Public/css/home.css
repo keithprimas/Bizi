@@ -64,4 +64,13 @@ body {
     color: yellow;
 }
 
+
+.btn-danger {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: rgb(132, 119, 248);
+    --bs-btn-border-color: rgb(132, 119, 248);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #bb2d3b;
+    --bs-btn-hover-border-color: #b02a37;
+}
   
