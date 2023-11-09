@@ -19,11 +19,11 @@ Input.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    phone_number: {
-      type: DataTypes.NUMBER,
+    phone: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
-    location: {
+    user_location: {
         type: DataTypes.STRING,
         allowNull: true,
     },

@@ -4,7 +4,7 @@ const logout = async () => {
     });
   
     if (response.ok) {
-      document.location.replace('/login');
+      document.user_location.replace('/login');
     }
   };
   
