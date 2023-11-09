@@ -8,5 +8,8 @@ router.use('/users', userRoutes); // this should be good
 
 router.use('/inputs',inputsRoutes)
 
+router.use('/inputs',inputsRoutes)
+
+router.use('/inputs', inputsRoutes);
 module.exports = router;
 

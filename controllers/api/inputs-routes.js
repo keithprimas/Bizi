@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Input = require('../../Models'); 
+const Input = require('../../Models/input'); 
 
 // route to create a card - this is fine
 router.post('/', async (req, res) => {
@@ -7,8 +7,8 @@ router.post('/', async (req, res) => {
     const inputData = await Input.create({
       user_name: req.body.user_name,
       email_address: req.body.email_address,
-      phone_number: req.body.phone_number,
-      location: req.body.location,
+      phone: req.body.phone,
+      user_location: req.body.user_location,
       personal: req.body.personal,
       title: req.body.title,
       company: req.body.company,
@@ -27,8 +27,8 @@ router.put('/:id', async (req, res) => {
         {
             user_name: req.body.user_name,
             email_address: req.body.email_address,
-            phone_number: req.body.phone_number,
-            location: req.body.location,
+            phone: req.body.phone,
+            user_location: req.body.user_location,
             personal: req.body.personal,
             title: req.body.title,
             company: req.body.company,

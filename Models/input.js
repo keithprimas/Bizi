@@ -20,33 +20,30 @@ Input.init(
       allowNull: true,
     },
     phone_number: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.STRING, // Changed to DataTypes.STRING since phone numbers are typically stored as strings
       allowNull: false,
     },
-    location: {
+    user_location: {
         type: DataTypes.STRING,
         allowNull: true,
     },
     personal: {
-        type: DataTypes.STRING,
-        allowNull: true,
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     title: {
-        type: DataTypes.STRING,
-        allowNull: true,
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     company: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
   },
   {
     sequelize,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'input',
+    modelName: 'input', // Removed freezeTableName and underscored options
   }
 );
 
 module.exports = Input;
-
