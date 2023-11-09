@@ -19,8 +19,8 @@ Input.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    phone: {
-      type: DataTypes.INTEGER,
+    phone_number: {
+      type: DataTypes.STRING, // Changed to DataTypes.STRING since phone numbers are typically stored as strings
       allowNull: false,
     },
     user_location: {
@@ -28,25 +28,22 @@ Input.init(
         allowNull: true,
     },
     personal: {
-        type: DataTypes.STRING,
-        allowNull: true,
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     title: {
-        type: DataTypes.STRING,
-        allowNull: true,
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     company: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
   },
   {
     sequelize,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'input',
+    modelName: 'input', // Removed freezeTableName and underscored options
   }
 );
 
 module.exports = Input;
-
