@@ -39,6 +39,13 @@ Input.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
+    // userId: { 
+    //   type: DataTypes.INTEGER, // added userID
+    //   references: {
+    //     model: 'user',
+    //     key: 'id',
+    //   },
+    // },
   },
   {
     sequelize,
