@@ -23,9 +23,9 @@ Input.init(
       type: DataTypes.STRING, // Changed to DataTypes.STRING since phone numbers are typically stored as strings
       allowNull: false,
     },
-    location: {
-      type: DataTypes.STRING,
-      allowNull: true,
+    user_location: {
+        type: DataTypes.STRING,
+        allowNull: true,
     },
     personal: {
       type: DataTypes.STRING,

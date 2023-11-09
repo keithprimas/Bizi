@@ -12,7 +12,7 @@ const loginFormHandler = async (event) => {
         headers: { 'Content-Type': 'application/json' },
       });
       if (response.ok) {
-        window.location = '/';
+        window.user_location = '/';
         // Process the API response, if needed
         // Example: const data = await response.json();
 
@@ -43,7 +43,7 @@ const signupFormHandler = async (event) => {
       });
       if (response.ok) {
         Swal.fire("Thank you for signing up!");
-        window.location.href = '/';
+        window.user_location.href = '/';
       } else {
        window.alert = Swal.fire("Failed to sign up. Please check all fields");
       }

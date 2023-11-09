@@ -24,16 +24,38 @@ router.get('/posts', async (req, res) => {
           model: User,
           // attributes: ['name'],
         },
+        {
+          model: Input,
+
+        }
       ],
     });
 
     const posts = postData.map((post) => post.get({ plain: true }));
 
+  
     res.render('main', { layout: 'main' });
+    // res.render('inputs', { layout: 'main' });
+
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
+
+router.get('/input', async (req, res) => {
+  try {
+
+    res.render('inputs', { layout: 'main' });
+
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+
+
+
 
 module.exports = router;

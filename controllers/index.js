@@ -9,7 +9,7 @@ const inputsroute = require('./api/inputs-routes');
 router.use('/', hompageroutes);
 router.use('/api', apiRoutes);
 router.use('/login', userRoutes);
-router.use('/inputs', inputsroute);
+router.use('/input', inputsroute);
 
 module.exports = router;
 

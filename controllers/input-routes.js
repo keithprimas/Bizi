@@ -15,3 +15,4 @@ router.get('/', (req, res) => {
 res.render('inputs', {layout: 'main'});
 
 module.exports = router;
+

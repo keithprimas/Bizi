@@ -64,6 +64,17 @@ body {
     color: yellow;
 }
 
+.top-card-header{
+    position: relative;
+    top: 10px;
+    font-size: 40px;
+    color: yellow;
+
+}
+
+#inputs-section{
+    position: relative;
+}
 
 .btn-danger {
     --bs-btn-color: #fff;

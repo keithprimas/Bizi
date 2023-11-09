@@ -1,10 +1,63 @@
+<h1 class="top-left-header"><span class="material-symbols-outlined">
+    hive
+    </span>Bizi</h1>
+    
+      
+    <a href="/login" class="btn btn-danger logout-button">Logout</a>
+
+
+<div class="bizi-card-container">
+  <div class="card-header col-md-12 text-center">
+    <h2 class="top-card-header">
+    My Bizi Cards
+    </h2>
+  </div>
+  {{#each cards as |bizi_card|}}
+  <div class="bizi_card col-md-4">
+    <p>
+      {{bizi_card.id}}.
+      {{bizicard.user_name}}
+    </p>
+  </div>
+  <div class="col-md-4">
+    <p>
+      {{bizi_card.email_address}}
+    </p>
+  </div>
+  <div class="col-md-4">
+    <p>
+      {{bizi_card.phone}}
+    </p>
+  </div>
+  <div class="col-md-4">
+    <p>
+      {{bizi_card.user_location}}
+    </p>
+  </div>
+  <div class="col-md-4">
+    <p>
+      {{bizi_card.personal}}
+    </p>
+  </div>
+  <div class="col-md-5">
+    <p>
+      {{bizi_card.title}}
+    </p>
+  </div>
+  <div class="col-md-5">
+    <p>
+      {{bizi_card.company}}
+    </p>
+  </div>
+  {{/each}}
+
 {{!-- digital business card --}}
 
     {{!-- Contact Info: --}}
         {{!-- Name
         Email
         Phone
-        Location: --}}
+        user_location: --}}
 
 <div class="card border-0" id="inputs-section">
 
@@ -29,20 +82,20 @@
                 {{email_address}}
             </input>
             <br />
-            <label for="phone_number">
+            <label for="phone">
                 Phone:
             </label>
             <br/>
-            <input type="text" name="phone_number" id="phone_number" cols="30" rows="1">
-                {{phone_number}}
+            <input type="text" name="phone" id="phone" cols="30" rows="1">
+                {{phone}}
             </input>
             <br />
-            <label for="location">
+            <label for="user_location">
                 City, State:
             </label>
             <br />
-            <input type="text" name="location" id="location" cols="30" rows="1">
-                {{location}}
+            <input type="text" name="user_location" id="user_location" cols="30" rows="1">
+                {{user_location}}
             </input>
             <br />        
         </form>
@@ -71,11 +124,11 @@
             Job Title
             Company Name --}}
         
-    <div class="add-job-container">
+    <div class="job-container">
         <h3>
             Work
         </h3>
-        <form class="job-one-form">
+        <form class="work-form">
             <label for="title">
                 Title:
             </label>
@@ -108,7 +161,10 @@
     <!-- Copyright -->
 </footer>
 
+<link rel="stylesheet" type="text/css" href="./css/home.css">
 
+
+<script src="/assets/js/logout.js"></script>
 <script src="/assets/js/inputs.js"></script>
 
 
