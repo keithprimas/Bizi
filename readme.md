@@ -58,9 +58,45 @@ Bizi is our answer to quickly build, edit, save and download a digital business 
 
 ## Usage
 
-Instructions:
+Instructions: run an npm install for these dependecies:
 
-How to go back to homepage:
+	  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "connect-session-sequelize": "^7.1.7",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.17.3",
+    "handlebars": "^4.7.8",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.6.2",
+    "sequelize": "^6.33.0",
+    "sweetalert2": "^11.9.0"
+  
+  
+  	"devDependencies": {
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.0.1"
+
+Example of Log in Page:
+![bizi_loginPage](https://github.com/keithprimas/Bizi/assets/139652929/935a1c1f-2812-4376-aaf6-5b74abf55103)
+
+Example of Failed Signup attempt on Log in Page:
+![bizi_failedSignup](https://github.com/keithprimas/Bizi/assets/139652929/38570ee4-1587-4bae-bed9-dbb5c2218435)
+
+Example of Create New Bizi card page:
+![bizi_createNew](https://github.com/keithprimas/Bizi/assets/139652929/509748a1-4421-497f-a7e8-ebfce910b914)
+
+Example of User inputs page, empty, and filled:
+![bizi_inputsForm](https://github.com/keithprimas/Bizi/assets/139652929/fcfde0d9-263b-444a-9c0f-841e4c5fe8dd)
+![bizi_inputsFilled](https://github.com/keithprimas/Bizi/assets/139652929/9c2feb85-ce9e-40cf-82ef-f5524ff61561)
+
+
+Example of User inputs page, Failed to add Message:
+![bizi_failedToAdd](https://github.com/keithprimas/Bizi/assets/139652929/28b90671-35a3-4e91-a1cc-61eb14c2ff4f)
+
+
+
 
 ## Credits
 
@@ -89,7 +125,15 @@ API used:
 	<link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-     
+Resources used:
+
+	- Xpert
+ 	- ChatGPT
+  	- UNCC bootcamp activities
+   	- Youtube.com
+    	- MDN Web Docs
+     	- StackOverflow.com
+      	- DigitalOcean.com
 
 ## License
 
