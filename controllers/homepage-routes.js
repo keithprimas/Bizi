@@ -32,7 +32,7 @@ router.get('/posts', async (req, res) => {
       ],
     });
 
-    const posts = postData.map((post) => post.get({ plain: true }));
+    const post = postData.map((post) => post.get({ plain: true }));
 
   
     res.render('main', { layout: 'main' });

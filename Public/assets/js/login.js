@@ -12,7 +12,7 @@ const loginFormHandler = async (event) => {
         headers: { 'Content-Type': 'application/json' },
       });
       if (response.ok) {
-        window.user_location = '/';
+        window.location = '/';
         // Process the API response, if needed
         // Example: const data = await response.json();
 
