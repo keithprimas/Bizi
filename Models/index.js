@@ -9,7 +9,7 @@ Post.belongsTo(User, {
     onDelete: 'CASCADE'
 });
 
-Input.belongsTo(Post, {
+Input.belongsTo(User, {
     foreignKey: 'userId',
     onDelete: 'CASCADE'
 });
