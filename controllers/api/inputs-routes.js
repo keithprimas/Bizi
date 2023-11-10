@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Input = require('../../Models/input'); 
+const Input = require('../../Models');
 
 // route to create a card - this is fine
 router.post('/', async (req, res) => {
