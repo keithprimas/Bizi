@@ -95,7 +95,8 @@ Example of User inputs page, empty, and filled:
 Example of User inputs page, Failed to add Message:
 ![bizi_failedToAdd](https://github.com/keithprimas/Bizi/assets/139652929/28b90671-35a3-4e91-a1cc-61eb14c2ff4f)
 
-
+## Demo
+https://drive.google.com/file/d/1sMyP931ec3L8oq_LkryoJOviRTNAIr6c/view?usp=sharing
 
 
 ## Credits
