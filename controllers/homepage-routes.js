@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const { User, Post } = require('../Models');
-const Input = require
+const { User, Post, Input } = require('../Models');
 
 // Load the login page on root route
 router.get('/', async (req, res) => {
@@ -56,18 +55,20 @@ router.get('/input', async (req, res) => {
 });
 
 // route to get all cards
-router.get('/input', async (req, res) => {
-  const inputData = await Input.findAll().catch((err) => { 
-      res.json(err);
-    });
-      const inputs = inputData.map((input) => input.get({ plain: true }));
-      res.render('all', { inputs });
-    });
+// router.get('/input', async (req, res) => {
+//   const inputData = await Input.findAll().catch((err) => { 
+//       res.json(err);
+//     });
+//       const inputs = inputData.map((input) => input.get({ plain: true }));
+//       res.render('all', { inputs });
+//     });
 
 // route to get one card
 router.get('/input/:id', async (req, res) => {
   try{ 
       const inputData = await Input.findByPk(req.params.id);
+      console.log("input data: ");
+      console.log(inputData);
       if(!inputData) {
           res.status(404).json({message: 'No card with this id!'});
           return;

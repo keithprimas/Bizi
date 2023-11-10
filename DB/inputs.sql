@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS inputs (
 
   user_name VARCHAR(255),
   email_address VARCHAR(255),
-  phone VARCHAR(255),
+  phone_number VARCHAR(255),
   user_location VARCHAR(255),
   personal VARCHAR(255),
   title VARCHAR(255),
