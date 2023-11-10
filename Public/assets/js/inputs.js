@@ -34,4 +34,4 @@ async function newFormHandler(event) {
     
 document
   .querySelector('#inputs-section')
-  .addEventListener('submit', newFormHandler);
+  
