@@ -1,0 +1,20 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('/assets/cardbg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+  }
+
+  .bizi_card {
+    background-color: white;
+    padding: 50px;
+  }
+  .name {
+    font-size: 25px;
+  }

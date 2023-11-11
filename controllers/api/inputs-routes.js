@@ -12,6 +12,7 @@ router.post('/', async (req, res) => {
       personal: req.body.personal,
       title: req.body.title,
       company: req.body.company,
+      userId: req.body.userId,
     });
     res.status(200).json(inputData);
   } catch (err) {

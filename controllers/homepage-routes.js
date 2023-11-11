@@ -55,13 +55,13 @@ router.get('/input', async (req, res) => {
 });
 
 // route to get all cards
-// router.get('/input', async (req, res) => {
-//   const inputData = await Input.findAll().catch((err) => { 
-//       res.json(err);
-//     });
-//       const inputs = inputData.map((input) => input.get({ plain: true }));
-//       res.render('all', { inputs });
-//     });
+router.get('/card', async (req, res) => {
+  const inputData = await Input.findAll().catch((err) => { 
+      res.json(err);
+    });
+      const cards = inputData.map((input) => input.get({ plain: true }));
+      res.render('card', { cards });
+    });
 
 // route to get one card
 router.get('/input/:id', async (req, res) => {

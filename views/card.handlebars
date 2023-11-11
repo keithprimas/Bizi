@@ -1,0 +1,62 @@
+<h1 class="top-left-header"><span class="material-symbols-outlined">
+    hive
+    </span>Bizi</h1>
+    
+      
+    <a href="/login" class="btn btn-danger logout-button">Logout</a>
+
+
+<div class="bizi-card-container">
+  <div class="card-header col-md-12 text-center">
+    <h2 class="top-card-header">
+    My Bizi Cards
+    </h2>
+  </div>
+  {{#each cards as |bizi_card|}}
+  <div class="row bizi_card">
+    <div class="col-md-7">
+      <p class="name">{{bizi_card.user_name}}</p>
+      <p>{{bizi_card.title}}</p>
+      <p>"{{bizi_card.personal}}"</p>
+    </div>
+    <div class="col-md-5">
+      <p>{{bizi_card.company}}</p>
+      <p>{{bizi_card.email_address}}</p>
+      <p>{{bizi_card.phone}}</p>
+      <p>{{bizi_card.user_location}}</p>
+    </div>
+  </div>
+  <hr>
+  {{/each}}
+</div>
+
+{{!-- digital business card --}}
+
+    {{!-- Contact Info: --}}
+        {{!-- Name
+        Email
+        Phone
+        user_location: --}}
+
+
+<footer class="text-center text-lg-start fixed-bottom">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); color: white">
+        © 2023 All Rights Reserved: By Keith Primas, Alejandro Reyes-Solis, and Ben Palacpac
+    </div>
+    <!-- Copyright -->
+</footer>
+
+
+<link rel="stylesheet" type="text/css" href="./css/home.css">
+<link rel="stylesheet" type="text/css" href="./css/card.css">
+
+<script src="/assets/js/logout.js"></script>
+<script src="/assets/js/inputs.js"></script>
+
+
+
+
+
+
+

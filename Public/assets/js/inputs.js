@@ -9,7 +9,7 @@ const newFormHandler = async (event) => {
   const title = document.querySelector('#title').value;
   const company = document.querySelector('#company').value;
 
-  if(user_name && phone) {
+  if(user_name && email_address && phone_number && user_location) {
     try {
       const response = await fetch(`/api/input`, {
         method: 'POST',
@@ -29,7 +29,7 @@ const newFormHandler = async (event) => {
     
       if (response.ok) {
         document.location.replace('/card');
-        console.log(response)
+        console.log(response);
       }
       else {
         alert('Failed to add info');
