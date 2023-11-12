@@ -8,13 +8,14 @@ body {
     color: yellow;
     position: relative;
     top: 10px;
-  }
+}
 
-  .centered-button {
+.centered-button {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
 }
 
 
@@ -35,6 +36,11 @@ body {
     text-align: center;
     line-height: 250px;
     cursor: pointer;
+    
+}
+
+.add-new-link {
+    text-decoration: none !important;
 }
 
 
@@ -74,6 +80,10 @@ body {
 
 #inputs-section{
     position: relative;
+    background-image: url('/assets/cardbg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 25px;
 }
 
 .btn-danger {

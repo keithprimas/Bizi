@@ -39,17 +39,17 @@ Input.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    // userId: { 
-    //   type: DataTypes.INTEGER, // added userID
-    //   references: {
-    //     model: 'user',
-    //     key: 'id',
-    //   },
-    // },
+    userId: { 
+      type: DataTypes.INTEGER, // added userID
+      references: {
+        model: 'user',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,
-    modelName: 'input', // Removed freezeTableName and underscored options
+    modelName: 'inputs', // Removed freezeTableName and underscored options
   }
 );
 

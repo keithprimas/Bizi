@@ -9,68 +9,21 @@
 <div class="bizi-card-container">
   <div class="card-header col-md-12 text-center">
     <h2 class="top-card-header">
-    My Bizi Cards
+    Input Your Info
     </h2>
   </div>
-  {{#each cards as |bizi_card|}}
-  <div class="bizi_card col-md-4">
-    <p>
-      {{bizi_card.id}}.
-      {{bizicard.user_name}}
-    </p>
-  </div>
-  <div class="col-md-4">
-    <p>
-      {{bizi_card.email_address}}
-    </p>
-  </div>
-  <div class="col-md-4">
-    <p>
-      {{bizi_card.phone}}
-    </p>
-  </div>
-  <div class="col-md-4">
-    <p>
-      {{bizi_card.user_location}}
-    </p>
-  </div>
-  <div class="col-md-4">
-    <p>
-      {{bizi_card.personal}}
-    </p>
-  </div>
-  <div class="col-md-5">
-    <p>
-      {{bizi_card.title}}
-    </p>
-  </div>
-  <div class="col-md-5">
-    <p>
-      {{bizi_card.company}}
-    </p>
-  </div>
-  {{/each}}
 
-{{!-- digital business card --}}
-
-    {{!-- Contact Info: --}}
-        {{!-- Name
-        Email
-        Phone
-        user_location: --}}
-
+{{!-- Contact Info: --}}
 <div class="card border-0" id="inputs-section">
 
     <div class="add-contact-info-container">
-        <h3>
-            Contact Info
-        </h3>
+        <h3>Contact Info</h3>
         <form class="contact-info-form">
             <label for="user_name">
                 Name:
             </label>
             <br />
-            <input type="text" name="user_name" id="user_name" cols="30" rows="1">
+            <input type="text" name="user_name" id="user_name">
                 {{user_name}}        
             </input>
             <br />
@@ -78,7 +31,7 @@
                 Email:
             </label>
             <br />
-            <input type="text" name="email_address" id="email_address" cols="30" rows="1">
+            <input type="text" name="email_address" id="email_address">
                 {{email_address}}
             </input>
             <br />
@@ -86,7 +39,7 @@
                 Phone:
             </label>
             <br/>
-            <input type="text" name="phone" id="phone" cols="30" rows="1">
+            <input type="text" name="phone" id="phone_number">
                 {{phone}}
             </input>
             <br />
@@ -94,46 +47,39 @@
                 City, State:
             </label>
             <br />
-            <input type="text" name="user_location" id="user_location" cols="30" rows="1">
+            <input type="text" name="user_location" id="user_location">
                 {{user_location}}
             </input>
             <br />        
         </form>
     </div>
+    <br />
 
-    {{!-- Personal Profile --}}
-        {{!-- What I do for You:
-            personal snippet --}}
-
+{{!-- Personal Snippet --}}
     <div class="personal-snippet">
-        <h3>Personal Profile</h3>
+        <h3>Personal Snippet</h3>
         <form class="personal-form">
             <label for="personal">
                 What I do for You:
             </label>
             <br />
-            <textarea name="personal" id="personal" cols="30" rows="1">
+            <textarea name="personal" id="personal">
                 {{personal}}
             </textarea>
             <br />        
         </form>
     </div>
+    <br />
 
-    {{!-- Job Title and Company --}}
-        {{!-- Work:
-            Job Title
-            Company Name --}}
-        
+{{!-- Job Title and Company --}}
     <div class="job-container">
-        <h3>
-            Work
-        </h3>
+        <h3>Work</h3>
         <form class="work-form">
             <label for="title">
                 Title:
             </label>
             <br />
-            <input type="text" name="title" id="title" cols="30" rows="1">
+            <input type="text" name="title" id="title">
                 {{title}}        
             </input>
             <br />
@@ -141,9 +87,10 @@
                 Company Name:
             </label>
             <br />
-            <input type="text" name="company" id="company" cols="30" rows="1">
+            <input type="text" name="company" id="company">
                 {{company}}
             </input>
+            <br />
             <br />
             <button type="submit" value="Submit">
             Submit
