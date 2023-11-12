@@ -43,12 +43,12 @@ const signupFormHandler = async (event) => {
       });
       if (response.ok) {
         Swal.fire("Thank you for signing up!");
-        window.user_location.href = '/';
+        window.location = '/';
       } else {
        window.alert = Swal.fire("Failed to sign up. Please check all fields");
       }
-    } catch (error) {
-      console.error('Error:', error);
+    } catch (err) {
+      console.error('Error:', err);
     }
   }
 };
