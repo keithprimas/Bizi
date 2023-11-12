@@ -14,16 +14,16 @@
   </div>
   {{#each cards as |bizi_card|}}
   <div class="row bizi_card">
-    <div class="col-md-7">
+    <div class="col-md-6">
       <p class="name">{{bizi_card.user_name}}</p>
       <p>{{bizi_card.title}}</p>
       <p>"{{bizi_card.personal}}"</p>
     </div>
-    <div class="col-md-5">
+    <div class="col-md-6">
       <p>{{bizi_card.company}}</p>
-      <p>{{bizi_card.email_address}}</p>
-      <p>{{bizi_card.phone}}</p>
-      <p>{{bizi_card.user_location}}</p>
+      <p style="font-size: 15px"> <i class="fa-solid fa-envelope"></i> {{bizi_card.email_address}}</p>
+      <p> <i class="fa-solid fa-phone-volume"></i> {{bizi_card.phone_number}}</p>
+      <p> <i class="fa-solid fa-location-dot"></i> {{bizi_card.user_location}}</p>
     </div>
   </div>
   <hr>

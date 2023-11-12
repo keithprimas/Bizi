@@ -13,6 +13,7 @@ body {
 
   .bizi_card {
     background-color: white;
+    border-radius: 25;
     padding: 50px;
   }
   .name {

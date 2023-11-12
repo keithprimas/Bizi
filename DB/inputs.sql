@@ -12,5 +12,5 @@ CREATE TABLE IF NOT EXISTS inputs (
   title VARCHAR(255),
   company VARCHAR(255),
   userId INT,
-  FOREIGN KEY (userId) REFERENCES users(id)
+  FOREIGN KEY (userId) REFERENCES user(id)
 );

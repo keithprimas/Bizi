@@ -3,7 +3,7 @@ const newFormHandler = async (event) => {
 
   const user_name = document.querySelector('#user_name').value;
   const email_address = document.querySelector('#email_address').value;
-  const phone_number = document.querySelector('#phone').value;
+  const phone_number = document.querySelector('#phone_number').value;
   const user_location = document.querySelector('#user_location').value;
   const personal = document.querySelector('#personal').value;
   const title = document.querySelector('#title').value;
