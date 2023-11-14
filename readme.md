@@ -47,7 +47,7 @@ Bizi is our answer to quickly build, edit, save and download a digital business 
 - What problem does it solve? It is both a time saver and a convenient place to build and store a business card. Why waste time and money designing and ordering new paper business cards whenever you get a new job or earn a new title/position?  No more reaching for a paper card in your wallet and forgeting that you left them at home.
 
 - What did you learn? 
-	Back End is a vicous creature, as is impostor syndrome 
+	Handlebars is efficient and Back End is a vicous creature, as is impostor syndrome 
 		~Ben
 
 ## Table of Contents
@@ -85,15 +85,18 @@ Example of Failed Signup attempt on Log in Page:
 ![bizi_failedSignup](https://github.com/keithprimas/Bizi/assets/139652929/38570ee4-1587-4bae-bed9-dbb5c2218435)
 
 Example of Create New Bizi card page:
-![bizi_createNew](https://github.com/keithprimas/Bizi/assets/139652929/509748a1-4421-497f-a7e8-ebfce910b914)
+![bz card no underline](https://github.com/keithprimas/Bizi/assets/139652929/32f63de6-d1de-4465-b342-cd49705c95d5)
+
 
 Example of User inputs page, empty, and filled:
-![bizi_inputsForm](https://github.com/keithprimas/Bizi/assets/139652929/fcfde0d9-263b-444a-9c0f-841e4c5fe8dd)
-![bizi_inputsFilled](https://github.com/keithprimas/Bizi/assets/139652929/9c2feb85-ce9e-40cf-82ef-f5524ff61561)
-
+![background update](https://github.com/keithprimas/Bizi/assets/139652929/c17a3d14-2adb-427e-a27f-9ca0b683da9e)
 
 Example of User inputs page, Failed to add Message:
 ![bizi_failedToAdd](https://github.com/keithprimas/Bizi/assets/139652929/28b90671-35a3-4e91-a1cc-61eb14c2ff4f)
+
+Example of cards page with cards rendered:
+![added logos](https://github.com/keithprimas/Bizi/assets/139652929/e2efb6f1-28cc-429d-8c80-e22616b2cfd8)
+
 
 
 
