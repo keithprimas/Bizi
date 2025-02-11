@@ -48,3 +48,21 @@ router.put('/:id', async (req, res) => {
 });
 
 module.exports = router;
+
+/*
+ * This file defines the routes for handling input-related operations using Express.js.
+ * 
+ * - The first route is a POST request to create a new input record in the database.
+ *   It expects the request body to contain user_name, email_address, phone_number, 
+ *   user_location, personal, title, company, and userId fields. If the creation is 
+ *   successful, it responds with a 200 status and the created input data. If there 
+ *   is an error, it responds with a 400 status and the error message.
+ * 
+ * - The second route is a PUT request to update an existing input record in the database 
+ *   based on the provided id parameter. It expects the request body to contain user_name, 
+ *   email_address, phone_number, user_location, personal, title, and company fields. If 
+ *   the update is successful, it responds with a 200 status and the updated input data. 
+ *   If there is an error, it responds with a 500 status and the error message.
+ * 
+ * Both routes interact with the Input model to perform the necessary database operations.
+ */
